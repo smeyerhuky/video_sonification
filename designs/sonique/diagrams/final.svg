@@ -1,0 +1,129 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="700" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Project Sonique MVP: Complete Pipeline Architecture</text>
+  
+  <!-- Stage 1: Visual Pattern Analysis -->
+  <rect x="100" y="60" width="600" height="120" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="400" y="80" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Stage 1: Visual Pattern Analysis</text>
+  
+  <!-- Stage 1 Components -->
+  <rect x="120" y="95" width="170" height="70" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="205" y="115" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Multi-Band Motion Analysis</text>
+  <text x="205" y="135" font-family="Arial" font-size="10" text-anchor="middle">Full Frequency Decomposition</text>
+  <text x="205" y="150" font-family="Arial" font-size="10" text-anchor="middle">Motion Type Classification</text>
+  
+  <rect x="315" y="95" width="170" height="70" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="400" y="115" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Fourier Decomposition</text>
+  <text x="400" y="135" font-family="Arial" font-size="10" text-anchor="middle">2D Spatial Frequency Analysis</text>
+  <text x="400" y="150" font-family="Arial" font-size="10" text-anchor="middle">Temporal Frequency Analysis</text>
+  
+  <rect x="510" y="95" width="170" height="70" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="595" y="115" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Jitter Analysis</text>
+  <text x="595" y="135" font-family="Arial" font-size="10" text-anchor="middle">Micro-Motion Detection</text>
+  <text x="595" y="150" font-family="Arial" font-size="10" text-anchor="middle">Amplification Mapping</text>
+  
+  <!-- Artist Interaction 1 -->
+  <rect x="350" y="180" width="100" height="30" rx="15" fill="#ffcc80" stroke="#e65100" stroke-width="2"/>
+  <text x="400" y="200" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Artist Review</text>
+  
+  <!-- Stage 2: Pattern Abstraction -->
+  <rect x="100" y="220" width="600" height="120" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="400" y="240" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Stage 2: Pattern Abstraction &amp; Transformation</text>
+  
+  <!-- Stage 2 Components -->
+  <rect x="120" y="255" width="170" height="70" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="205" y="275" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Pattern Extraction</text>
+  <text x="205" y="295" font-family="Arial" font-size="10" text-anchor="middle">Multi-level Feature Aggregation</text>
+  <text x="205" y="310" font-family="Arial" font-size="10" text-anchor="middle">Pattern Classification</text>
+  
+  <rect x="315" y="255" width="170" height="70" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="400" y="275" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Vector Field Decomposition</text>
+  <text x="400" y="295" font-family="Arial" font-size="10" text-anchor="middle">SVD Processing</text>
+  <text x="400" y="310" font-family="Arial" font-size="10" text-anchor="middle">Principal Component Extraction</text>
+  
+  <rect x="510" y="255" width="170" height="70" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="595" y="275" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Mathematical Transformation</text>
+  <text x="595" y="295" font-family="Arial" font-size="10" text-anchor="middle">Non-linear Transformations</text>
+  <text x="595" y="310" font-family="Arial" font-size="10" text-anchor="middle">Differential Pattern Analysis</text>
+  
+  <!-- Artist Interaction 2 -->
+  <rect x="350" y="340" width="100" height="30" rx="15" fill="#ffcc80" stroke="#e65100" stroke-width="2"/>
+  <text x="400" y="360" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Artist Selection</text>
+  
+  <!-- Stage 3: Parameter Mapping -->
+  <rect x="100" y="380" width="600" height="120" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="400" y="400" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Stage 3: Sonification Parameter Mapping</text>
+  
+  <!-- Stage 3 Components -->
+  <rect x="120" y="415" width="170" height="70" rx="5" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1"/>
+  <text x="205" y="435" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Parameter Matrix System</text>
+  <text x="205" y="455" font-family="Arial" font-size="10" text-anchor="middle">Multi-dimensional Mapping</text>
+  <text x="205" y="470" font-family="Arial" font-size="10" text-anchor="middle">Transfer Functions</text>
+  
+  <rect x="315" y="415" width="170" height="70" rx="5" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1"/>
+  <text x="400" y="435" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Musical Structure Framework</text>
+  <text x="400" y="455" font-family="Arial" font-size="10" text-anchor="middle">Temporal Structure Mapping</text>
+  <text x="400" y="470" font-family="Arial" font-size="10" text-anchor="middle">Harmonic Mapping System</text>
+  
+  <rect x="510" y="415" width="170" height="70" rx="5" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1"/>
+  <text x="595" y="435" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Lookup Table Generation</text>
+  <text x="595" y="455" font-family="Arial" font-size="10" text-anchor="middle">Pattern Tables</text>
+  <text x="595" y="470" font-family="Arial" font-size="10" text-anchor="middle">Parameter Mapping Tables</text>
+  
+  <!-- Artist Interaction 3 -->
+  <rect x="350" y="500" width="100" height="30" rx="15" fill="#ffcc80" stroke="#e65100" stroke-width="2"/>
+  <text x="400" y="520" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Artist Configuration</text>
+  
+  <!-- Stage 4: Audio Generation -->
+  <rect x="100" y="540" width="600" height="120" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="400" y="560" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Stage 4: Audio Generation &amp; Refinement</text>
+  
+  <!-- Stage 4 Components -->
+  <rect x="120" y="575" width="170" height="70" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="205" y="595" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Wobble Bass Generator</text>
+  <text x="205" y="615" font-family="Arial" font-size="10" text-anchor="middle">Multi-oscillator Engine</text>
+  <text x="205" y="630" font-family="Arial" font-size="10" text-anchor="middle">LFO Modulation System</text>
+  
+  <rect x="315" y="575" width="170" height="70" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="400" y="595" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Rhythm Generation</text>
+  <text x="400" y="615" font-family="Arial" font-size="10" text-anchor="middle">Beat Construction Engine</text>
+  <text x="400" y="630" font-family="Arial" font-size="10" text-anchor="middle">Percussion Synthesis</text>
+  
+  <rect x="510" y="575" width="170" height="70" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="595" y="595" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Harmonic &amp; Melodic System</text>
+  <text x="595" y="615" font-family="Arial" font-size="10" text-anchor="middle">Chord Progression Generator</text>
+  <text x="595" y="630" font-family="Arial" font-size="10" text-anchor="middle">Atmospheric Sound Design</text>
+  
+  <!-- Final Output -->
+  <rect x="300" y="660" width="200" height="30" rx="5" fill="#42a5f5" stroke="#1565c0" stroke-width="2"/>
+  <text x="400" y="680" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Electronic Music Track Output</text>
+  
+  <!-- Flow Arrows -->
+  <path d="M 400 180 L 400 220" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 340 L 400 380" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 500 L 400 540" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 645 L 400 660" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Artist Workflows -->
+  <path d="M 100 185 C 50 185 50 350 100 350" stroke="#f57c00" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <text x="60" y="260" font-family="Arial" font-size="10" font-style="italic" text-anchor="middle" fill="#f57c00">Pattern</text>
+  <text x="60" y="275" font-family="Arial" font-size="10" font-style="italic" text-anchor="middle" fill="#f57c00">Selection</text>
+  
+  <path d="M 700 345 C 750 345 750 510 700 510" stroke="#f57c00" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <text x="740" y="420" font-family="Arial" font-size="10" font-style="italic" text-anchor="middle" fill="#f57c00">Parameter</text>
+  <text x="740" y="435" font-family="Arial" font-size="10" font-style="italic" text-anchor="middle" fill="#f57c00">Adjustment</text>
+  
+  <path d="M 100 505 C 50 505 50 670 100 670" stroke="#f57c00" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/>
+  <text x="60" y="580" font-family="Arial" font-size="10" font-style="italic" text-anchor="middle" fill="#f57c00">Audio</text>
+  <text x="60" y="595" font-family="Arial" font-size="10" font-style="italic" text-anchor="middle" fill="#f57c00">Refinement</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#666"/>
+    </marker>
+  </defs>
+</svg>

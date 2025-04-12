@@ -1,0 +1,144 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle">Use Case: Cornfield with Birds</text>
+  <text x="400" y="55" font-family="Arial" font-size="14" font-style="italic" text-anchor="middle">Pattern to Audio Mapping Example</text>
+  
+  <!-- Video Frame Visualization -->
+  <rect x="50" y="80" width="260" height="180" rx="5" fill="#ffffff" stroke="#1565c0" stroke-width="2"/>
+  <text x="180" y="100" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Source Video Frame</text>
+  
+  <!-- Simplified Cornfield Visualization -->
+  <rect x="70" y="110" width="220" height="130" fill="#f5f5dc" stroke="#1565c0" stroke-width="1"/>
+  
+  <!-- Corn Stalks -->
+  <line x1="100" y1="120" x2="100" y2="230" stroke="#7c8942" stroke-width="2"/>
+  <line x1="130" y1="120" x2="130" y2="230" stroke="#7c8942" stroke-width="2"/>
+  <line x1="160" y1="120" x2="160" y2="230" stroke="#7c8942" stroke-width="2"/>
+  <line x1="190" y1="120" x2="190" y2="230" stroke="#7c8942" stroke-width="2"/>
+  <line x1="220" y1="120" x2="220" y2="230" stroke="#7c8942" stroke-width="2"/>
+  <line x1="250" y1="120" x2="250" y2="230" stroke="#7c8942" stroke-width="2"/>
+  
+  <!-- Corn Movement Indicators -->
+  <path d="M 100 180 C 105 175, 95 170, 100 165" stroke="#7c8942" stroke-width="1" fill="none"/>
+  <path d="M 130 175 C 135 170, 125 165, 130 160" stroke="#7c8942" stroke-width="1" fill="none"/>
+  <path d="M 160 170 C 165 165, 155 160, 160 155" stroke="#7c8942" stroke-width="1" fill="none"/>
+  <path d="M 190 180 C 195 175, 185 170, 190 165" stroke="#7c8942" stroke-width="1" fill="none"/>
+  <path d="M 220 175 C 225 170, 215 165, 220 160" stroke="#7c8942" stroke-width="1" fill="none"/>
+  <path d="M 250 170 C 255 165, 245 160, 250 155" stroke="#7c8942" stroke-width="1" fill="none"/>
+  
+  <!-- Birds -->
+  <path d="M 90 130 C 95 125, 100 125, 105 130 M 95 130 C 100 135, 105 135, 110 130" stroke="#000000" stroke-width="1" fill="none"/>
+  <path d="M 210 140 C 215 135, 220 135, 225 140 M 215 140 C 220 145, 225 145, 230 140" stroke="#000000" stroke-width="1" fill="none"/>
+  <path d="M 170 120 C 175 115, 180 115, 185 120 M 175 120 C 180 125, 185 125, 190 120" stroke="#000000" stroke-width="1" fill="none"/>
+  
+  <!-- Pattern Analysis -->
+  <rect x="360" y="80" width="390" height="180" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="555" y="100" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Pattern Analysis Results</text>
+  
+  <!-- Multi-Band Analysis Results -->
+  <rect x="370" y="110" width="180" height="140" rx="3" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="460" y="125" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Multi-Band Motion Analysis</text>
+  
+  <!-- ULF Band -->
+  <rect x="380" y="135" width="160" height="20" rx="2" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="390" y="149" font-family="Arial" font-size="9" text-anchor="start">ULF Band: Minimal Activity</text>
+  <rect x="500" y="138" width="30" height="14" rx="7" fill="#ffffff">
+    <animate attributeName="fill" values="#ffffff;#bbdefb;#ffffff" dur="10s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- LF Band -->
+  <rect x="380" y="160" width="160" height="20" rx="2" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="390" y="174" font-family="Arial" font-size="9" text-anchor="start">LF Band: Strong Oscillatory</text>
+  <rect x="500" y="163" width="30" height="14" rx="7" fill="#0277bd">
+    <animate attributeName="fill" values="#0277bd;#81d4fa;#0277bd" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- MF Band -->
+  <rect x="380" y="185" width="160" height="20" rx="2" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="390" y="199" font-family="Arial" font-size="9" text-anchor="start">MF Band: Bird Movement</text>
+  <rect x="500" y="188" width="30" height="14" rx="7" fill="#4fc3f7">
+    <animate attributeName="fill" values="#4fc3f7;#b3e5fc;#4fc3f7" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- HF/UHF Band -->
+  <rect x="380" y="210" width="160" height="20" rx="2" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="390" y="224" font-family="Arial" font-size="9" text-anchor="start">HF/UHF: Leaf Jitter</text>
+  <rect x="500" y="213" width="30" height="14" rx="7" fill="#b3e5fc">
+    <animate attributeName="fill" values="#b3e5fc;#e1f5fe;#b3e5fc" dur="0.5s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Jitter Analysis Results -->
+  <rect x="560" y="110" width="180" height="140" rx="3" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="650" y="125" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Jitter Analysis</text>
+  
+  <!-- Jitter Detection -->
+  <rect x="570" y="135" width="160" height="30" rx="2" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="650" y="155" font-family="Arial" font-size="9" text-anchor="middle">Micro-movement in corn leaves</text>
+  
+  <!-- Jitter Characteristics -->
+  <rect x="570" y="170" width="160" height="30" rx="2" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="650" y="190" font-family="Arial" font-size="9" text-anchor="middle">UHF Band (18-25Hz)</text>
+  
+  <!-- Amplification Potential -->
+  <rect x="570" y="205" width="160" height="30" rx="2" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="650" y="225" font-family="Arial" font-size="9" text-anchor="middle">Amplification Factor: 2.5x</text>
+  
+  <!-- Audio Mapping -->
+  <rect x="50" y="290" width="700" height="240" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="400" y="310" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Audio Parameter Mapping</text>
+  
+  <!-- Wobble Bass Section -->
+  <rect x="65" y="325" width="220" height="190" rx="3" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="175" y="345" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">Wobble Bass Parameters</text>
+  
+  <!-- Corn Oscillation to LFO Mapping -->
+  <rect x="75" y="355" width="200" height="70" rx="2" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+  <text x="175" y="370" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">LF Corn Oscillation → LFO Rate</text>
+  <text x="175" y="390" font-family="Arial" font-size="9" text-anchor="middle">Oscillation Frequency: 0.5-0.8Hz</text>
+  <text x="175" y="405" font-family="Arial" font-size="9" text-anchor="middle">Maps to LFO Range: 1-4Hz</text>
+  
+  <!-- Jitter to Filter Mapping -->
+  <rect x="75" y="435" width="200" height="70" rx="2" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+  <text x="175" y="450" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Leaf Jitter → Filter Modulation</text>
+  <text x="175" y="470" font-family="Arial" font-size="9" text-anchor="middle">Amplified Jitter Controls</text>
+  <text x="175" y="485" font-family="Arial" font-size="9" text-anchor="middle">Filter Resonance (Q): 3-12</text>
+  
+  <!-- Rhythm Section -->
+  <rect x="295" y="325" width="220" height="190" rx="3" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="405" y="345" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">Rhythm Generation</text>
+  
+  <!-- Bird Movement to Percussion -->
+  <rect x="305" y="355" width="200" height="70" rx="2" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+  <text x="405" y="370" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">MF Bird Movement → Percussion</text>
+  <text x="405" y="390" font-family="Arial" font-size="9" text-anchor="middle">Bird Motion as Trigger Events</text>
+  <text x="405" y="405" font-family="Arial" font-size="9" text-anchor="middle">Maps to Hi-Hat and Shaker Patterns</text>
+  
+  <!-- Base Rhythm -->
+  <rect x="305" y="435" width="200" height="70" rx="2" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+  <text x="405" y="450" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">LF Oscillation → Beat Structure</text>
+  <text x="405" y="470" font-family="Arial" font-size="9" text-anchor="middle">Corn Sway Period: ~1.5s</text>
+  <text x="405" y="485" font-family="Arial" font-size="9" text-anchor="middle">Maps to 120 BPM (2Hz) Rhythm</text>
+  
+  <!-- Harmonic Section -->
+  <rect x="525" y="325" width="220" height="190" rx="3" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="635" y="345" font-family="Arial" font-size="11" font-weight="bold" text-anchor="middle">Harmonic Elements</text>
+  
+  <!-- Atmospheric Mapping -->
+  <rect x="535" y="355" width="200" height="70" rx="2" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+  <text x="635" y="370" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">ULF Scene Evolution → Pads</text>
+  <text x="635" y="390" font-family="Arial" font-size="9" text-anchor="middle">Gradual Scene Changes</text>
+  <text x="635" y="405" font-family="Arial" font-size="9" text-anchor="middle">Maps to Atmospheric Texture</text>
+  
+  <!-- Harmonic Mapping -->
+  <rect x="535" y="435" width="200" height="70" rx="2" fill="#ffcc80" stroke="#ef6c00" stroke-width="1"/>
+  <text x="635" y="450" font-family="Arial" font-size="10" font-weight="bold" text-anchor="middle">Color Palette → Chord Progression</text>
+  <text x="635" y="470" font-family="Arial" font-size="9" text-anchor="middle">Natural Green/Yellow/Blue Palette</text>
+  <text x="635" y="485" font-family="Arial" font-size="9" text-anchor="middle">Maps to Natural Minor/Modal Harmony</text>
+  
+  <!-- Audio Output Visualization -->
+  <rect x="50" y="540" width="700" height="40" rx="5" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+  <text x="400" y="565" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle">Atmospheric House Track with Organic Wobble Bass and Bird-Driven Percussion</text>
+</svg>
