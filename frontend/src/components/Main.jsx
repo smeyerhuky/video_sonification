@@ -1,8 +1,7 @@
-// import AnimationExample from './AnimationExample';
-import VideoToAudioTransformer from './VideoToAudioTransformer';
+import AnimationExample from './AnimationExample';
 
 const Main = () => (
-    <VideoToAudioTransformer />
+    <AnimationExample />
 )
 
 
