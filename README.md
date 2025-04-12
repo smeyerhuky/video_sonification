@@ -1,129 +1,250 @@
-# Video Sonification Project
+# Project Sonique: Multi-dimensional Video-to-Music System
 
-Transform video content into dynamic house/dub music with characteristic "wubwub" bass sounds. This project analyzes video frames for motion, color, and edges, then maps these visual elements to musical parameters.
+Transform video content into sophisticated electronic music through pattern analysis across multiple frequency domains. Project Sonique identifies fundamental patterns in motion, color, and form, abstracting them into musical parameters through a multi-stage pipeline with artist intervention.
 
-![Simplified Overview](designs/simplified.svg)
+![System Architecture](designs/sonique/diagrams/arch_0_1_0.svg)
 
 ## Project Vision
 
-This system converts visual information into musical elements:
-- **Motion detection** → Wobble bass modulation
-- **Color analysis** → Harmonic elements and chord progressions
-- **Edge detection** → Rhythm patterns and percussion
+Project Sonique uses multi-dimensional pattern analysis rather than semantic object recognition to create authentic connections between visual and auditory domains:
 
-The result is a unique audio experience that directly reflects the visual content of your videos.
+- **Multi-Band Motion Analysis** → Maps frequency-specific motion patterns (0.01Hz-50Hz) to musical parameters
+- **Pattern Abstraction & Transformation** → Creates higher-order structures from fundamental patterns
+- **Sonification Parameter Mapping** → Translates patterns to comprehensive audio parameter matrices
+- **Audio Generation & Refinement** → Produces professional-grade electronic music with characteristic wobble bass
+
+The result is a powerful tool for electronic music producers seeking new sources of inspiration with deep control over the translation process.
 
 ## System Architecture
 
-The project follows a microservices architecture with three main components:
+Project Sonique employs a hybrid microservice architecture with both frontend and backend components:
 
-1. **Frontend** (React/Vite)
-   - User interface for video upload/capture
-   - Visual analysis visualization
-   - Audio playback controls
-   - Parameter adjustment interface
+### 1. Frontend Microservices (React/Vite)
 
-2. **Microservices**
-   - Specialized services for different processing needs
-   - Containerized for easy deployment
-   - Service-specific processing logic
+Each frontend microservice focuses on a specific domain while sharing data through a common context system:
 
-3. **Thrift Interface Layer**
-   - Defines service APIs using Apache Thrift
-   - Ensures consistent communication between components
-   - Language-agnostic service definitions
+- **Video Analysis Dashboard**
+  - Video upload/capture interface
+  - Multi-band visualization components
+  - TensorFlow.js for real-time lightweight analysis
+  - WebGL-powered frequency domain visualizations
 
-![Processing Pipeline](designs/pipieline.svg)
+- **Pattern Explorer**
+  - Interactive pattern classification interface
+  - Mathematical transformation tools
+  - Pattern relationship visualization
+  - Template management system
+
+- **Audio Parameter Mapper**
+  - Comprehensive mapping matrix editor
+  - Transfer function design interface
+  - Parameter relationship visualization
+  - Preset management system
+
+- **Music Generator**
+  - Audio playback controls
+  - Synthesis parameter adjustment
+  - Stem isolation and mixing
+  - DAW export functionality
+
+### 2. Backend Microservices
+
+Specialized processing services with different technology stacks based on requirements:
+
+- **Multi-Band Analysis Service** (Python/NumPy/SciPy)
+  - Frequency band decomposition
+  - Motion type classification
+  - Distribution analysis
+  - Mathematical transformations
+
+- **Jitter Analysis Service** (Python/OpenCV)
+  - Micro-movement detection
+  - Jitter characterization
+  - Amplification mapping
+  - Sub-pixel tracking
+
+- **LLaVA Integration Service** (Python/Ollama)
+  - Semantic analysis of video content
+  - Knowledge graph construction
+  - Context-aware processing
+  - Feature correlation
+
+- **Audio Generation Service** (Python/librosa)
+  - Wobble bass synthesis
+  - Rhythm generation
+  - Harmonic content creation
+  - Professional audio export
+
+### 3. Communication Infrastructure
+
+- **NATS Message Broker**
+  - Publish-subscribe pattern for event distribution
+  - Service discovery and registry
+  - Request-reply for synchronous operations
+  - Queue groups for load balancing
+
+- **WebSocket Gateway**
+  - Real-time bidirectional communication
+  - Progress updates and streaming results
+  - Live parameter adjustment
+  - UI synchronization across components
+
+- **Shared Context System**
+  - Distributed state management
+  - Security and access control (stubbed)
+  - Event notification system
+  - Session management
 
 ## Key Technical Components
 
-### Video Analysis Pipeline
+### Multi-Band Motion Analysis Framework
 
-Video frames undergo multiple analysis techniques:
+Video motion is analyzed across five frequency bands:
 
-1. **Motion Analysis**
-   - Optical flow detection using OpenCV
-   - Motion intensity and direction metrics
-   - High-motion region identification
-   - Maps to wobble bass parameters (LFO rate, filter settings)
+1. **Ultra-Low Frequency (ULF)**: 0.01-0.1 Hz
+   - Scene transitions, camera movements, slow evolutions
+   - Maps to arrangement structure, musical evolution
 
-   ![Wobble Bass Mapping](designs/wubba.svg)
+2. **Low Frequency (LF)**: 0.1-1 Hz
+   - Swaying, drifting motions (like corn swaying in field)
+   - Maps to bass fundamentals, filter envelope timing
 
-2. **Color Analysis**
-   - Dominant color extraction
-   - RGB to HSV color space conversion
-   - Color change tracking
-   - Maps to harmonic elements (chord progressions, pad sounds)
+3. **Mid Frequency (MF)**: 1-5 Hz
+   - Regular rhythmic movements (like walking)
+   - Maps to wobble LFO rates, rhythm foundations
 
-3. **Edge Detection**
-   - Canny edge detection algorithm
-   - Edge intensity and distribution analysis
-   - Edge pattern change tracking
-   - Maps to rhythm patterns (hi-hats, percussion)
+4. **High Frequency (HF)**: 5-15 Hz
+   - Rapid actions, quick transitions
+   - Maps to percussion triggers, staccato elements
 
-   ![Rhythm Mapping](designs/rhythm.svg)
+5. **Ultra-High Frequency (UHF)**: 15+ Hz
+   - Vibrations, jitter, micro-movements
+   - Maps to texture details, granular synthesis parameters
 
-### Audio Generation
+Within each band, motion is classified into types (Directional, Oscillatory, Chaotic, Ambient) and mapped to audio parameters through a comprehensive Parameter Matrix System.
 
-The system produces house/dub style music with:
+### Jitter Analysis System
 
-1. **Wobble Bass Generator**
-   - Bass synthesizer with LFO modulation
-   - Filter modulation for "wubwub" effect
-   - Motion-driven parameter mapping
+Specialized analysis for micro-movements and subtle variations:
 
-2. **Rhythm Generation**
-   - Four-on-the-floor kick pattern base
-   - Edge-triggered hi-hats and percussion
-   - Visual feature-linked variations
+- **Detection Pipeline**: High-pass filtering of motion vectors, sub-pixel tracking
+- **Characterization**: Frequency spectrum analysis, spatial distribution mapping
+- **Amplification**: User-controlled enhancement curves, non-linear transformations
 
-3. **Atmospheric Elements**
-   - Pad synthesizer with reverb/delay
-   - Color-driven chord progressions
-   - Ambient texture generation
+### Vector Field Decomposition
+
+Matrix operations for efficient motion representation and processing:
+
+- **SVD Processing**: Motion vector field decomposition, principal component extraction
+- **Tensor Representation**: Multi-dimensional encoding of pattern data
+- **Field Operations**: Transformation matrices for pattern manipulation
+
+### Wobble Bass Generator
+
+Professional-grade bass synthesis engine:
+
+- **Multi-oscillator Engine**: Layered synthesis for complex timbres
+- **LFO Modulation System**: Multi-stage LFO routing directly linked to motion patterns
+- **Filter Processing Chain**: Dynamic resonance control, motion-driven modulation
 
 ## Technology Stack
 
-- **Frontend**: React, Vite, Web Audio API, Canvas/WebGL
+- **Frontend**: React, Vite, WebGL, TensorFlow.js, Tone.js, Module Federation
 - **Backend Services**: 
-  - Go service for high-performance processing
-  - Python service for ML-based analysis
-- **Infrastructure**: Docker, docker-compose
-- **Communication**: Apache Thrift
-- **Video Processing**: OpenCV, WebRTC
-- **Audio Synthesis**: Web Audio API, Tone.js
+  - Python with NumPy, SciPy, librosa for analysis and synthesis
+  - Ollama/LLaVA for semantic understanding
+- **Infrastructure**: Docker/Kubernetes with NVIDIA CUDA support
+- **Communication**: NATS Message Broker, WebSockets, gRPC
+- **Processing**: OpenCV, FFT libraries, distributed computing
+- **Data Management**: Redis for caching, SQLite for local storage
 
-## v0.0.1 Development Roadmap
+## Development Roadmap
 
-The initial version focuses on establishing the basic pipeline:
+### Phase 1: Infrastructure & Foundation (Current Focus)
 
-1. **Simple Interface Development**
-   - Video upload functionality
-   - Camera capture integration
-   - Basic video playback controls
+1. **Microservice Architecture Setup**
+   - Containerization with GPU support
+   - NATS message broker integration
+   - Shared context/tagging system
+   - Service communication protocols
 
-2. **Core Pipeline Setup**
-   - Video frame extraction
-   - Preliminary visual feature detection
-   - Basic audio parameter mapping
+2. **Multi-Band Motion Analysis Framework**
+   - Frequency band decomposition implementation
+   - Motion type classification system
+   - Basic pattern detection pipeline
+   - Visualization components
 
-3. **Minimal Audio Generation**
-   - Simple bass sound with video-driven modulation
-   - Basic rhythm pattern generation
-   - Rudimentary atmospheric elements
+3. **Frontend Micro-Frontend Architecture**
+   - Module federation implementation
+   - Shared context providers
+   - Component library development
+   - Basic UI implementation
 
-4. **User Controls**
-   - Parameter adjustment sliders
-   - Audio mute/volume controls
-   - Processing on/off toggles
+4. **Prototype Workflow Integration**
+   - End-to-end pipeline testing
+   - Basic parameter mapping
+   - Simple audio generation
+   - User feedback collection
+
+### Phase 2: Advanced Analysis & Transformation
+
+1. **Enhanced Motion Analysis**
+   - Complete multi-band analysis pipeline
+   - Sophisticated pattern classification
+   - Jitter analysis system
+   - Vector field operations
+
+2. **Mathematical Transformation System**
+   - Non-linear transformations
+   - Differential pattern analysis
+   - Integration and accumulation
+   - Pattern relationship modeling
+
+3. **LLaVA Integration**
+   - Semantic understanding setup
+   - Knowledge graph construction
+   - Multi-modal data alignment
+   - Feature correlation analysis
+
+4. **Lookup Table Generation**
+   - Motion distribution tables
+   - Semantic feature tables
+   - Parameter mapping templates
+   - Temporal structure templates
+
+### Phase 3: Audio Generation & Refinement
+
+1. **Wobble Bass Generator**
+   - Multi-oscillator engine
+   - LFO modulation system
+   - Filter processing chain
+   - Pattern-driven parameter control
+
+2. **Rhythm Generation System**
+   - Beat construction engine
+   - Percussion synthesis
+   - Groove and timing engine
+   - Motion-driven variations
+
+3. **Harmonic and Melodic System**
+   - Chord progression generator
+   - Melodic pattern engine
+   - Atmospheric sound design
+   - Structural organization
+
+4. **Audio Export & Integration**
+   - DAW-compatible export formats
+   - Stem separation
+   - Metadata embedding
+   - External tool integration
 
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js (see frontend/.nvmrc for version)
-- Docker and docker-compose
-- Go (for local microservice development)
+- Docker and docker-compose with NVIDIA container toolkit
+- NVIDIA GPU with CUDA support (recommended)
 - Python 3.8+ (for local microservice development)
 
 ### Installation
@@ -146,22 +267,57 @@ The initial version focuses on establishing the basic pipeline:
 
 ## Development Approach
 
-This project uses a modular architecture to allow parallel development of components:
+This project uses a microservice architecture with the following organization:
 
-1. **Frontend Development**
-   - Located in `frontend/`
-   - React/Vite application
-   - Handles UI, visualization, and audio playback
+1. **Frontend Microservices**
+   - Located in `frontend/services/`
+   - Each has its own container and can be developed independently
+   - Share common libraries through `frontend/lib/`
 
-2. **Microservices Development**
+2. **Backend Microservices**
    - Located in `microservices/`
-   - Specialized services for different processing needs
+   - Specialized services with their own technology stacks
    - Each service has its own Dockerfile
 
-3. **API Interface Definitions**
-   - Located in `thrift/`
-   - Define service APIs using Apache Thrift
-   - Generate client/server code for different languages
+3. **Shared Components**
+   - Located in `shared/`
+   - Common types, interfaces, and utilities
+   - Cross-service schemas and protocols
+
+4. **Infrastructure Configuration**
+   - Located in `infra/`
+   - Kubernetes manifests
+   - Service mesh configuration
+   - Monitoring and observability setup
+
+## EDM Production Workflow
+
+Project Sonique integrates with electronic music production workflows in these stages:
+
+1. **Video Selection & Analysis**
+   - Upload or capture video content
+   - Explore multi-band patterns
+   - Select interesting visual elements
+
+2. **Pattern Exploration & Transformation**
+   - Examine pattern abstractions
+   - Apply mathematical transformations
+   - Select patterns for musical mapping
+
+3. **Parameter Mapping Configuration**
+   - Define relationships between patterns and audio parameters
+   - Configure transfer functions
+   - Create mapping templates
+
+4. **Audio Generation & Refinement**
+   - Generate audio based on mappings
+   - Adjust synthesis parameters
+   - Refine the musical output
+
+5. **Export & Production Integration**
+   - Export stems or complete tracks
+   - Import into DAW for further production
+   - Use as inspiration or as finished elements
 
 ## Contributing
 
@@ -173,6 +329,6 @@ This project is licensed under the terms of the LICENSE file included in the rep
 
 ## Acknowledgments
 
-- OpenCV for video processing capabilities
-- Web Audio API for audio synthesis
-- Apache Thrift for service communication
+- Signal Processing techniques adapted from audio and image processing research
+- Inspiration from EDM production workflows and tools
+- Pattern analysis approaches from computer vision and machine learning domains

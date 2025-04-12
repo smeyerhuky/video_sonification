@@ -1,0 +1,14 @@
+{
+    "CPU": "13th Gen Intel(R) Core(TM) i9-13900HX",
+    "CPU cores": "32",
+    "GPU": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "GPU Memory": "8188",
+    "RAM": "64141 MB",
+    "Disk": {
+        "Size": "3.6T",
+        "Used": "0.6T",
+        "Available": "3.0T",
+        "Use%": "17%"
+    },
+    "OS": "Pop!_OS 22.04 LTS"
+}
