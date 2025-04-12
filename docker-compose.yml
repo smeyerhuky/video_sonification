@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  # React Frontend Development Service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: video_sonification-frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true # Enables hot-reloading in Docker
+    command: yarn dev --host 0.0.0.0 --base=/video_sonification/
+    networks:
+      - video_sonification-network
+
+  # Python Implementation of DataService
+  python-service:
+    build:
+      context: ./microservices/python_service
+      dockerfile: Dockerfile
+    container_name: video_sonification-python-service
+    volumes:
+      - ./microservices/python_service:/app
+    ports:
+      - "5000:5000"
+    networks:
+      - video_sonification-network
+    environment:
+      - SERVICE_NAME=python-data-service
+      - SERVICE_PORT=5000
+
+  # Go Implementation of DataService
+  go-service:
+    build:
+      context: ./microservices/go_service
+      dockerfile: Dockerfile
+    container_name: video_sonification-go-service
+    volumes:
+      - ./microservices/go_service:/app
+    ports:
+      - "5001:5001"
+    networks:
+      - video_sonification-network
+    environment:
+      - SERVICE_NAME=go-data-service
+      - SERVICE_PORT=5001
+
+volumes:
+  node_modules:
+
+
+networks:
+  video_sonification-network:
+    driver: bridge

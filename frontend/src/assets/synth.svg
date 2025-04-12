@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228">
+  <rect x="10" y="10" width="236" height="208" rx="15" ry="15" fill="#2A2A2A" />
+  <rect x="30" y="30" width="196" height="80" rx="5" ry="5" fill="#111111" stroke="#444444" stroke-width="2" />
+  <path d="M 30,70 Q 50,30 70,70 Q 90,110 110,70" stroke="#8A2BE2" stroke-width="4" fill="none" />
+  <path d="M 110,70 L 130,30 L 130,70 L 150,30 L 150,70" stroke="#00BFFF" stroke-width="4" fill="none" />
+  <path d="M 150,70 L 150,30 L 170,30 L 170,70 L 190,70 L 190,30 L 210,30 L 210,70" stroke="#FFD700" stroke-width="4" fill="none" />
+  <circle cx="60" cy="150" r="20" fill="#333333" stroke="#444444" stroke-width="2" />
+  <circle cx="60" cy="150" r="15" fill="#8A2BE2" />
+  <line x1="60" y1="150" x2="60" y2="135" stroke="#FFD700" stroke-width="2" />
+  <circle cx="128" cy="150" r="20" fill="#333333" stroke="#444444" stroke-width="2" />
+  <circle cx="128" cy="150" r="15" fill="#00BFFF" />
+  <line x1="128" y1="150" x2="128" y2="135" stroke="#FFD700" stroke-width="2" />
+  <circle cx="196" cy="150" r="20" fill="#333333" stroke="#444444" stroke-width="2" />
+  <circle cx="196" cy="150" r="15" fill="#FFD700" />
+  <line x1="196" y1="150" x2="196" y2="135" stroke="#8A2BE2" stroke-width="2" />
+  <rect x="30" y="190" width="196" height="10" rx="5" ry="5" fill="#333333" stroke="#444444" stroke-width="1" />
+  <rect x="70" y="188" width="30" height="14" rx="7" ry="7" fill="#00BFFF" stroke="#8A2BE2" stroke-width="1" />
+</svg>

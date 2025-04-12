@@ -1,0 +1,15 @@
+# python ignores
+__pycache__/
+.venv/
+venv/
+
+
+.vscode/
+
+node_modules
+
+.log
+.logs
+
+
+dist

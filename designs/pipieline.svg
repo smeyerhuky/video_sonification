@@ -1,0 +1,88 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Video to House/Dub Music Generation System</text>
+  
+  <!-- Main Flow Boxes -->
+  <rect x="50" y="70" width="150" height="80" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" />
+  <text x="125" y="115" font-family="Arial" font-size="16" text-anchor="middle">Video Input</text>
+  
+  <rect x="325" y="70" width="150" height="80" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" />
+  <text x="400" y="115" font-family="Arial" font-size="16" text-anchor="middle">Video Analysis</text>
+  
+  <rect x="600" y="70" width="150" height="80" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2" />
+  <text x="675" y="115" font-family="Arial" font-size="16" text-anchor="middle">Audio Output</text>
+  
+  <!-- Flow Arrows -->
+  <path d="M 200 110 L 325 110" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  <path d="M 475 110 L 600 110" stroke="#666" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Analysis Components -->
+  <rect x="150" y="200" width="120" height="60" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5" />
+  <text x="210" y="235" font-family="Arial" font-size="14" text-anchor="middle">Motion Analysis</text>
+  
+  <rect x="150" y="280" width="120" height="60" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5" />
+  <text x="210" y="315" font-family="Arial" font-size="14" text-anchor="middle">Color Analysis</text>
+  
+  <rect x="150" y="360" width="120" height="60" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5" />
+  <text x="210" y="395" font-family="Arial" font-size="14" text-anchor="middle">Edge Detection</text>
+  
+  <rect x="150" y="440" width="120" height="60" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5" />
+  <text x="210" y="475" font-family="Arial" font-size="14" text-anchor="middle">Scene Changes</text>
+  
+  <!-- Music Components -->
+  <rect x="530" y="200" width="120" height="60" rx="5" fill="#ffccbc" stroke="#e65100" stroke-width="1.5" />
+  <text x="590" y="235" font-family="Arial" font-size="14" text-anchor="middle">Bass Wobbles</text>
+  
+  <rect x="530" y="280" width="120" height="60" rx="5" fill="#ffccbc" stroke="#e65100" stroke-width="1.5" />
+  <text x="590" y="315" font-family="Arial" font-size="14" text-anchor="middle">Beat/Rhythm</text>
+  
+  <rect x="530" y="360" width="120" height="60" rx="5" fill="#ffccbc" stroke="#e65100" stroke-width="1.5" />
+  <text x="590" y="395" font-family="Arial" font-size="14" text-anchor="middle">Pads/Atmosphere</text>
+  
+  <rect x="530" y="440" width="120" height="60" rx="5" fill="#ffccbc" stroke="#e65100" stroke-width="1.5" />
+  <text x="590" y="475" font-family="Arial" font-size="14" text-anchor="middle">Song Structure</text>
+  
+  <!-- Mapping Components -->
+  <rect x="340" y="200" width="120" height="60" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5" />
+  <text x="400" y="235" font-family="Arial" font-size="14" text-anchor="middle">Feature Extraction</text>
+  
+  <rect x="340" y="280" width="120" height="60" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5" />
+  <text x="400" y="315" font-family="Arial" font-size="14" text-anchor="middle">Mapping</text>
+  
+  <rect x="340" y="360" width="120" height="60" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5" />
+  <text x="400" y="395" font-family="Arial" font-size="14" text-anchor="middle">Time Alignment</text>
+  
+  <rect x="340" y="440" width="120" height="60" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5" />
+  <text x="400" y="475" font-family="Arial" font-size="14" text-anchor="middle">Sound Synthesis</text>
+  
+  <!-- Connecting Arrows -->
+  <path d="M 270 230 L 340 230" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 270 310 L 340 310" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 270 390 L 340 390" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 270 470 L 340 470" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  
+  <path d="M 460 230 L 530 230" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 460 310 L 530 310" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 460 390 L 530 390" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 460 470 L 530 470" stroke="#666" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Vertical connections in the middle section -->
+  <path d="M 400 260 L 400 280" stroke="#2e7d32" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 340 L 400 360" stroke="#2e7d32" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  <path d="M 400 420 L 400 440" stroke="#2e7d32" stroke-width="1.5" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Pipeline Annotation -->
+  <path d="M 400 500 L 400 540" stroke="#666" stroke-width="1" fill="none" />
+  <rect x="325" y="540" width="150" height="40" rx="5" fill="#e0f7fa" stroke="#006064" stroke-width="1.5" />
+  <text x="400" y="565" font-family="Arial" font-size="14" text-anchor="middle">Processing Pipeline</text>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#666" />
+    </marker>
+  </defs>
+</svg>
