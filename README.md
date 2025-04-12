@@ -1,294 +1,178 @@
 # Video Sonification Project
 
-This project combines a microservices architecture with advanced natural language processing for data visualization and sonification. It features a React frontend with NLP-based controls and multiple backend services implemented in different languages (Python and Go), all communicating through a common Thrift interface definition.
+Transform video content into dynamic house/dub music with characteristic "wubwub" bass sounds. This project analyzes video frames for motion, color, and edges, then maps these visual elements to musical parameters.
+
+![Simplified Overview](designs/simplified.svg)
+
+## Project Vision
+
+This system converts visual information into musical elements:
+- **Motion detection** → Wobble bass modulation
+- **Color analysis** → Harmonic elements and chord progressions
+- **Edge detection** → Rhythm patterns and percussion
+
+The result is a unique audio experience that directly reflects the visual content of your videos.
 
 ## System Architecture
 
-```
-┌─────────────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-│                         │      │                 │      │                 │
-│  React Frontend         │──────│  Python Service │      │   Go Service    │
-│  - NLP Visualization    │      │                 │      │                 │
-│  - Data Sonification    │      └─────────────────┘      └─────────────────┘
-│                         │               │                       │
-└─────────────────────────┘               │                       │
-            │                             ▼                       │
-            │                    ┌─────────────────┐              │
-            └────────────────────│  Thrift IDL     │──────────────┘
-                                 │  Definition     │
-                                 └─────────────────┘
-```
+The project follows a microservices architecture with three main components:
 
-The system consists of the following components:
+1. **Frontend** (React/Vite)
+   - User interface for video upload/capture
+   - Visual analysis visualization
+   - Audio playback controls
+   - Parameter adjustment interface
 
-- **Frontend**: A React/Vite application with Tailwind CSS that includes:
-  - Natural language UI control system for data visualization
-  - Data sonification capabilities
-  - Responsive design with accessibility features
-  - State management using Zustand
+2. **Microservices**
+   - Specialized services for different processing needs
+   - Containerized for easy deployment
+   - Service-specific processing logic
 
-- **Python Service**: A Flask-based implementation of the DataService interface
-- **Go Service**: A Go implementation of the same DataService interface
-- **Thrift Definition**: A common interface definition that both services implement
+3. **Thrift Interface Layer**
+   - Defines service APIs using Apache Thrift
+   - Ensures consistent communication between components
+   - Language-agnostic service definitions
 
-## Directory Structure
+![Processing Pipeline](designs/pipieline.svg)
 
-- `frontend/`: React/Vite application with Tailwind CSS
-  - `src/components/`: UI components including dashboards and NLP interface
-  - `src/store/`: State management using Zustand
-  - `src/hooks/`: Custom React hooks
-- `microservices/python_service/`: Python implementation of the DataService
-- `microservices/go_service/`: Go implementation of the DataService
-- `thrift/`: Thrift interface definitions
-- `guidelines/`: Project guidelines and documentation
+## Key Technical Components
 
-## Quick Start
+### Video Analysis Pipeline
 
-### Using the Setup Script
+Video frames undergo multiple analysis techniques:
 
-We provide a setup script that automates the installation and configuration process:
+1. **Motion Analysis**
+   - Optical flow detection using OpenCV
+   - Motion intensity and direction metrics
+   - High-motion region identification
+   - Maps to wobble bass parameters (LFO rate, filter settings)
 
-```bash
-# Make the script executable (if needed)
-chmod +x devSetup.sh
+   ![Wobble Bass Mapping](designs/wubba.svg)
 
-# Run the setup script
-./devSetup.sh
-```
+2. **Color Analysis**
+   - Dominant color extraction
+   - RGB to HSV color space conversion
+   - Color change tracking
+   - Maps to harmonic elements (chord progressions, pad sounds)
 
-The script will:
-1. Check for required tools (Docker, Docker Compose)
-2. Set up the frontend (install dependencies if Yarn is available)
-3. Set up the Python service (create virtual environment if Python is available)
-4. Set up the Go service (initialize Go module and download dependencies if Go is available)
-5. Build the Docker images
+3. **Edge Detection**
+   - Canny edge detection algorithm
+   - Edge intensity and distribution analysis
+   - Edge pattern change tracking
+   - Maps to rhythm patterns (hi-hats, percussion)
 
-### Running the System
+   ![Rhythm Mapping](designs/rhythm.svg)
 
-After setup, start the system using Docker Compose:
+### Audio Generation
 
-```bash
-docker-compose up
-```
+The system produces house/dub style music with:
 
-This will start all services:
-- Frontend: http://localhost:5173/video_sonification/
-- Python Service: http://localhost:5000
-- Go Service: http://localhost:5001
+1. **Wobble Bass Generator**
+   - Bass synthesizer with LFO modulation
+   - Filter modulation for "wubwub" effect
+   - Motion-driven parameter mapping
 
-## Manual Setup
+2. **Rhythm Generation**
+   - Four-on-the-floor kick pattern base
+   - Edge-triggered hi-hats and percussion
+   - Visual feature-linked variations
 
-If you prefer to set up the system manually:
+3. **Atmospheric Elements**
+   - Pad synthesizer with reverb/delay
+   - Color-driven chord progressions
+   - Ambient texture generation
+
+## Technology Stack
+
+- **Frontend**: React, Vite, Web Audio API, Canvas/WebGL
+- **Backend Services**: 
+  - Go service for high-performance processing
+  - Python service for ML-based analysis
+- **Infrastructure**: Docker, docker-compose
+- **Communication**: Apache Thrift
+- **Video Processing**: OpenCV, WebRTC
+- **Audio Synthesis**: Web Audio API, Tone.js
+
+## v0.0.1 Development Roadmap
+
+The initial version focuses on establishing the basic pipeline:
+
+1. **Simple Interface Development**
+   - Video upload functionality
+   - Camera capture integration
+   - Basic video playback controls
+
+2. **Core Pipeline Setup**
+   - Video frame extraction
+   - Preliminary visual feature detection
+   - Basic audio parameter mapping
+
+3. **Minimal Audio Generation**
+   - Simple bass sound with video-driven modulation
+   - Basic rhythm pattern generation
+   - Rudimentary atmospheric elements
+
+4. **User Controls**
+   - Parameter adjustment sliders
+   - Audio mute/volume controls
+   - Processing on/off toggles
+
+## Getting Started
 
 ### Prerequisites
 
-- Docker and Docker Compose
-- Node.js and Yarn (optional, for local frontend development)
-- Python 3.9+ (optional, for local Python service development)
-- Go 1.19+ (optional, for local Go service development)
+- Node.js (see frontend/.nvmrc for version)
+- Docker and docker-compose
+- Go (for local microservice development)
+- Python 3.8+ (for local microservice development)
 
-### Frontend Setup
+### Installation
 
-```bash
-cd frontend
-yarn install
-```
-
-### Python Service Setup
-
-```bash
-cd microservices/python_service
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-### Go Service Setup
-
-```bash
-cd microservices/go_service
-# Initialize Go module if it doesn't exist
-if [ ! -f go.mod ]; then
-    go mod init video_sonification/data_service
-fi
-go mod tidy
-go mod download
-```
-
-### Building Docker Images
-
-```bash
-docker-compose build
-```
-
-## Testing the Services
-
-You can test the services directly using curl:
-
-```bash
-# Get all data from Python service
-curl http://localhost:5000/data
-
-# Get all data from Go service
-curl http://localhost:5001/data
-
-# Get metadata from Python service
-curl http://localhost:5000/metadata
-
-# Get metadata from Go service
-curl http://localhost:5001/metadata
-```
-
-## Features
-
-### Frontend
-
-- React/Vite application with hot-reloading
-- Tailwind CSS for styling
-- Natural language processing for UI control
-- Data visualization with recharts
-- Service switching between Python and Go implementations
-- Responsive design for mobile and desktop
-- Accessible UI with proper ARIA attributes
-
-### Natural Language UI Control
-
-The frontend includes a sophisticated natural language processing system that allows users to control data visualizations using plain English commands. Examples include:
-
-- "Show bar chart"
-- "Group by month"
-- "Use blue colors"
-- "Show monthly revenue as bar chart"
-
-### Microservices
-
-- Python service using Flask
-- Go service using gorilla/mux
-- Both implementing the same Thrift interface
-- RESTful API endpoints
-- CORS support for cross-origin requests
-
-## How It Works
-
-### Thrift Interface Definition
-
-The core of this architecture is the Thrift IDL definition that specifies the interface both Python and Go services implement:
-
-```thrift
-// data_service.thrift
-namespace py video_sonification.data
-namespace go video_sonification.data
-
-// Simple struct representing a data item
-struct DataItem {
-  1: i32 id,
-  2: string name,
-  3: string description,
-  4: double value,
-  5: map<string, string> metadata
-}
-
-// Response structure for service operations
-struct DataResponse {
-  1: bool success,
-  2: string message,
-  3: optional DataItem item,
-  4: optional list<DataItem> items
-}
-
-// Service definition
-service DataService {
-  // Get all available data items
-  DataResponse getAllData(),
-
-  // Get a specific data item by ID
-  DataResponse getDataById(1: i32 id),
-  
-  // Get metadata about the service
-  map<string, string> getMetadata()
-}
-```
-
-This interface is implemented by both Python and Go services, demonstrating Thrift's language neutrality.
-
-## Development
-
-### Rebuilding After Changes
-
-If you make changes to the code, you'll need to rebuild the Docker images:
-
-```bash
-docker-compose build
-docker-compose up
-```
-
-### Adding New Services
-
-To add a new service implementation in another language:
-
-1. Create a new directory under `microservices/`
-2. Implement the DataService interface defined in `thrift/data_service.thrift`
-3. Add the service to `docker-compose.yml`
-4. Update the frontend to communicate with the new service
-
-## Troubleshooting
-
-### Go Service Build Issues
-
-If you encounter issues with the Go service build related to missing go.sum entries:
-
-1. The Go service Dockerfile is configured to automatically initialize the Go module if it doesn't exist and run `go mod tidy` to generate the go.sum file. This should resolve most dependency issues automatically.
-
-2. If you still encounter issues, you can manually fix them by running:
-   ```bash
-   cd microservices/go_service
-   # Initialize Go module if it doesn't exist
-   if [ ! -f go.mod ]; then
-       go mod init video_sonification/data_service
-   fi
-   go mod tidy
-   go mod download
+1. Clone the repository:
+   ```
+   git clone [repository-url]
+   cd video_sonification
    ```
 
-3. Then rebuild the Docker images:
-   ```bash
-   docker-compose build
+2. Start the development environment:
+   ```
+   docker-compose up
    ```
 
-### Python Service Issues
-
-If you encounter issues with the Python service related to Werkzeug or other dependencies:
-
-1. The Python service requires specific versions of dependencies to work correctly. In particular, Flask 2.0.1 requires Werkzeug 2.0.x. The requirements.txt file includes these pinned versions.
-
-2. If you encounter an error like `ImportError: cannot import name 'url_quote' from 'werkzeug.urls'`, it means there's a version mismatch. Ensure the requirements.txt file includes:
+3. Access the application:
    ```
-   flask==2.0.1
-   flask-cors==3.0.10
-   thrift==0.15.0
-   gunicorn==20.1.0
-   werkzeug==2.0.3
+   http://localhost:3000
    ```
 
-3. Then rebuild the Docker images:
-   ```bash
-   docker-compose build
-   ```
+## Development Approach
 
-### Frontend Issues
+This project uses a modular architecture to allow parallel development of components:
 
-If you encounter issues with the frontend:
+1. **Frontend Development**
+   - Located in `frontend/`
+   - React/Vite application
+   - Handles UI, visualization, and audio playback
 
-1. Make sure Tailwind CSS is properly configured:
-   - Check that `tailwind.config.js` and `postcss.config.js` exist
-   - Verify that the CSS file includes the Tailwind directives
+2. **Microservices Development**
+   - Located in `microservices/`
+   - Specialized services for different processing needs
+   - Each service has its own Dockerfile
 
-2. Check for dependency issues:
-   ```bash
-   cd frontend
-   yarn install
-   ```
+3. **API Interface Definitions**
+   - Located in `thrift/`
+   - Define service APIs using Apache Thrift
+   - Generate client/server code for different languages
+
+## Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the terms of the LICENSE file included in the repository.
+
+## Acknowledgments
+
+- OpenCV for video processing capabilities
+- Web Audio API for audio synthesis
+- Apache Thrift for service communication
