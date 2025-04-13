@@ -51,6 +51,41 @@ services:
       - SERVICE_NAME=go-data-service
       - SERVICE_PORT=5001
 
+  # Multi-Band Motion Analysis Service with GPU Support
+  multi-band-analysis:
+    build:
+      context: ./microservices/multi_band_analysis
+      dockerfile: Dockerfile
+    container_name: video_sonification-multi-band-analysis
+    volumes:
+      - ./microservices/multi_band_analysis:/app
+    ports:
+      - "5002:5000"
+    networks:
+      - video_sonification-network
+    environment:
+      - SERVICE_NAME=multi-band-analysis
+      - SERVICE_PORT=5000
+      - NATS_URL=nats://nats:4222
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+
+  # NATS Message Broker
+  nats:
+    image: nats:latest
+    container_name: video_sonification-nats
+    ports:
+      - "4222:4222" # Client connections
+      - "8222:8222" # HTTP monitoring
+    networks:
+      - video_sonification-network
+    command: "--jetstream"
+
 volumes:
   node_modules:
 
